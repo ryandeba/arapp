@@ -10,32 +10,44 @@ html, body, iframe {margin: 0px; padding: 0px; height: 100%; border: none;}
 iframe {display: block; width: 100%; border: none; overflow-y: auto; overflow-x: hidden;}
 -->
 </style>
+	
+<style>.label-container { float:left; width:38%; text-align:left; min-width:150px; margin-bottom:5px; }
+.field-container { width:60%; text-align:left; margin-bottom:15px; float:left; min-width:200px;	}
+.form-button {margin-right:5px;}
+.form-radio, .form-checkbox {border:0px; background:none;} /*no styles on checkboxes and radio buttons**/
+.formbuilderDefaults {padding:15px 0px 15px 0px;}
+.formFieldContainer {padding-right:25px; padding-left:15px;}
+.formbuilderDefaults input, textarea {padding:5px;}
+.formFieldContainer {clear: both;} /**no fields floating to the right**/
+@media (pointer: coarse), (hover: none) {
+[title] {
+position: relative;
+display: flex;
+justify-content: center;
+}
+[title]:focus::after {
+content: attr(title);
+position: absolute;
+top: 90%;
+color: #000;
+background-color: #fff;
+border: 1px solid;
+width: fit-content;
+padding: 3px;
+}
+}
+</style>
 </head>
 <body>
-<noscript>
-<iframe id="emfl-noscript-F96BDCDD-75D6-4CCF-B1FA-48697DD48977" src="//hostedlandingpages.net/F96BDCDD-75D6-4CCF-B1FA-48697DD48977/" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" scrolling="auto"></iframe>
-</noscript>
-<iframe id="emfl-F96BDCDD-75D6-4CCF-B1FA-48697DD48977" src="" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" scrolling="auto" style="display:none;"></iframe>
-<script type="text/javascript">
-	function getURLVariable(variable) {
-	  var query = window.location.search.substring(1);
-	  var vars = query.split("&");
-	  for (var i=0;i<vars.length;i++) {
-	    var pair = vars[i].split("=");
-	    if (pair[0] == variable) {
-	      return pair[1];
-	    }
-	  }
-	}
+	
+	<div class="formbuilderDefaults" style="border:none;">
+<form method="post" name="frmLP-3E0A61B1-657F-4C20-B202-6953DDE1AD81" id="frmLP-3E0A61B1-657F-4C20-B202-6953DDE1AD81">
+<input type="hidden" name="method" id="_emfl_form_method" value="process">
+<input type="hidden" name="_emfl_validated" id="_emfl_validated" value="0">
+<input type="hidden" name="_emfl_contactID" id="_emfl_contactID" value="">
+<input type="hidden" name="_emfl_responseID" id="_emfl_responseID" value="43879">
+<input type="text" name="_emfl_url" id="_emfl_honeypot" value="" autocomplete="off">
+<br clear="all"><div class="formFieldContainer"><div class="label-container"><label for="email">Email*&nbsp;</label><a title="this is some help text"><img src="/_assets/images/icons/help.png"></a></div><div class="field-container"><input class="form-text" maxlength="75" customoption="email" rel="{required:true, email:true, domain: true, messages:{required:'Email is required', email:'Please enter a valid email address (user@yourdomain.com)', domain: ''}}" type="text" id="email" value="" name="email" title="Email" style="font-size:12px; width:100%;"></div></div><hr class="formbuilderHR"><br clear="all"><div class="formFieldContainer"><div class="label-container"><label for="firstName">First Name&nbsp;</label><a title="first name help text"><img src="/_assets/images/icons/help.png"></a></div><div class="field-container"><input class="form-text" maxlength="50" customoption="" rel="" type="text" id="firstName" value="" name="firstName" title="First Name" style="font-size:12px; width:100%;"></div></div><hr class="formbuilderHR"><div class="formFieldContainer"><input class="form-button" name="Submit" type="submit" value="Submit"></div></form></div>
 
-	if (document.getElementById) {
-		try {
-			var emfliframe = document.getElementById("emfl-F96BDCDD-75D6-4CCF-B1FA-48697DD48977");
-			emfliframe.style.display = "block";
-			emfliframe.src = "//hostedlandingpages.net/F96BDCDD-75D6-4CCF-B1FA-48697DD48977/?m=" + getURLVariable("m");
-		}
-		catch (e) {}
-	}
-</script>
 </body>
 </html>
